@@ -9,6 +9,7 @@ client = OpenAI(
     api_key=openai_api_key
 )
 
+# generate a code snippet based on given prompt
 def generate_snippet(prompt):
     completion = client.chat.completions.create(
         model="gpt-4o-mini",
@@ -19,20 +20,7 @@ def generate_snippet(prompt):
     )
     return completion.choices[0].message
 
+# validate whether a generated code snippet runs or crashes
 def validate_snippet(snippet):
     return
-
-def main():
-    prompt = ""
-    completion = client.chat.completions.create(
-        model="gpt-4o-mini",
-        messages=[
-            {"role": "system", "content": "You are a helpful assistant."},
-            {"role": "user", "content": prompt}
-        ]
-    )
-    print(completion.choices[0].message)
-
-if __name__ == "__main__":
-    main()
 
