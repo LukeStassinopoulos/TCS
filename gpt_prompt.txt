@@ -1,4 +1,0 @@
-import torch
-Generate input data relevant to the API {}
-Call the API and other relevant API
-Print the output
