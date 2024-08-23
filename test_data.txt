@@ -1,0 +1,10 @@
+torch.BFloat16Storage
+torch.BoolStorage
+torch.ByteStorage
+torch.CharStorage
+torch.ComplexDoubleStorage
+torch.ComplexFloatStorage
+torch.DoubleStorage
+torch.FloatStorage
+torch.Generator
+torch.HalfStorage

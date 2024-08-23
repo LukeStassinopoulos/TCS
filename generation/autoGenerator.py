@@ -14,11 +14,11 @@ def generate_snippet(prompt):
     completion = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
-            {"role": "system", "content": "You are an expert in Python programming and PyTorch. Your task is to generate Python code snippets that use PyTorch APIs, specifically designed for fuzz testing. Focus on generating code that explores edge cases, potential errors, and unusual usage patterns in PyTorch functions. Ensure the code is well-structured and ready for validation."},
+            {"role": "system", "content": "You are an expert in Python programming and PyTorch. Your task is to generate one python code snippet that follows the prompt's exact struture, ensuring to invoke the specified API, you will not insert any placeholder, you will not insert ``` python anywhere, please just output raw text, no comments anywhere."},
             {"role": "user", "content": prompt}
         ]
     )
-    return completion.choices[0].message
+    return completion.choices[0].message.content
 
 # validate whether a generated code snippet runs or crashes
 def validate_snippet(snippet):
