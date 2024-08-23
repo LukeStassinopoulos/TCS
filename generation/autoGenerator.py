@@ -12,9 +12,9 @@ client = OpenAI(
 # generate a code snippet based on given prompt
 def generate_snippet(prompt):
     completion = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model="gpt-4o",
         messages=[
-            {"role": "system", "content": "You are an expert in Python and PyTorch. Generate Python code that strictly follows the user prompt. Return only raw code, no comments, no formatting, no blank lines."},
+            {"role": "system", "content": "You are an expert in Python and PyTorch."},
             {"role": "user", "content": prompt}
         ]
     )
@@ -22,5 +22,12 @@ def generate_snippet(prompt):
 
 # validate whether a generated code snippet runs or crashes
 def validate_snippet(snippet):
-    return
+    try:
+        exec(snippet)
+        return True
+    except Exception as e:
+        error = str(e)
+        print(f"Snippet failed with error: {error}")
+        return False
+
 

@@ -2,6 +2,8 @@ from generation import autoGenerator
 from mutation import autoMutator
 
 def main():
+    snippets = []
+
     with open('gpt_prompt.txt', 'r') as prompt_file:
         prompt_structure = prompt_file.read()
     with open('test_data.txt', 'r') as api_file:
@@ -11,6 +13,8 @@ def main():
         api_signature = api_signature.strip()
         prompt = prompt_structure.format(api_signature)
         snippet = autoGenerator.generate_snippet(prompt)
+        if autoGenerator.validate_snippet(snippet):
+            snippets.append(snippet)
         print(f"{snippet}\n")
 
 if __name__ == "__main__":
