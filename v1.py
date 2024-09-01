@@ -40,3 +40,5 @@ if __name__ == "__main__":
         fuzz_conv2d()
 
 # Exception occurred during fuzzing: Calculated padded input size per channel: (42 x 5). Kernel size: (6 x 6). Kernel size can't be greater than actual input size
+
+# No mutations of anysort

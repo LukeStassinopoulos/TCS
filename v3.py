@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn
 import random
 
-def mutate_value(value, mutation_range=(-3,10000000)):
+def mutate_value(value, mutation_range=(1.1,2.2)):
     """Mutates a given value by adding a small random number within the mutation range."""
     return max(1, value + random.randint(*mutation_range))  # Ensure value is at least 1 for dimensions
 
@@ -51,4 +51,4 @@ if __name__ == "__main__":
     for _ in range(10):
         fuzz_conv2d()
 
-# working code 
+# mutation of parameters but everything works (negative dimensions, float etc)
