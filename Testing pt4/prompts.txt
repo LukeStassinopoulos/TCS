@@ -1,0 +1,29 @@
+1. Tensor Operations
+Focus on operations like arithmetic, reductions, reshaping, and indexing.
+Prompt:
+
+Generate Python code to perform fuzz testing for PyTorch tensor operations. Include a wide range of tensor operations such as arithmetic (add, subtract, multiply, etc.), reductions (mean, sum, max), reshaping (view, reshape, permute), and indexing. Generate random tensors of various shapes, sizes, and data types, and ensure maximum coverage of PyTorch’s tensor manipulation functionalities. Only report crashes or unexpected outputs, and ignore expected exceptions like size mismatches. Additionally, monitor memory usage and performance, and report only when memory usage exceeds a threshold or computation takes an unusually long time.
+
+2. Neural Network Functions (torch.nn and torch.nn.functional)
+Cover activations, losses, layers, and other neural network components.
+Prompt:
+
+Generate Python code to perform fuzz testing for PyTorch’s torch.nn and torch.nn.functional modules. Test a variety of neural network layers (like Linear, Conv2d, etc.), activation functions (relu, sigmoid, etc.), and loss functions (cross_entropy, mse_loss, etc.). Use random input tensors of different shapes and sizes to test these functions. Ensure that only legitimate errors or crashes are reported, and expected errors (like shape mismatches) are ignored. Monitor memory usage and performance, and report only when there are significant issues.
+
+3. Autograd and Gradient Calculations (torch.autograd)
+Test gradient calculation and backpropagation functionality.
+Prompt:
+
+Generate Python code to perform fuzz testing for PyTorch’s torch.autograd module, focusing on gradient calculation and backpropagation. Use various neural networks and tensors to compute gradients, and test edge cases like tensors with requires_grad=True. Ensure that only unexpected behavior (such as NaNs in gradients or crashes) is reported, while standard exceptions are ignored. Monitor performance and memory usage, and report only significant issues like memory spikes or slow operations.
+
+4. Optimization Algorithms (torch.optim)
+Focus on optimizers like SGD, Adam, RMSprop, etc.
+Prompt:
+
+Generate Python code to perform fuzz testing for PyTorch’s torch.optim module. Include tests for optimizers such as SGD, Adam, and RMSprop. Create random neural networks or tensors and use these optimizers to step through the weights. Ensure that only actual errors or performance issues are reported, while standard exceptions are silenced. Monitor for memory usage and performance issues, reporting only significant deviations.
+
+5. Distributed Training and Parallelism (torch.distributed)
+Test functionalities related to distributed and parallel computation.
+Prompt:
+
+Generate Python code to perform fuzz testing for PyTorch’s torch.distributed module, covering distributed training and parallelism features. Randomly generate data and models to test distributed functionality (e.g., torch.distributed.init_process_group, torch.nn.parallel.DistributedDataParallel). Focus on edge cases that could cause unexpected behavior in distributed setups. Report only true errors or performance bottlenecks, ignoring common exceptions like communication timeouts.
