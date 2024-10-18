@@ -2,3 +2,5 @@ My heirachy includes folders of python scripts created by ChatGPT.
 The folders merely indicate the batch of testing it was completed in.
 As in each folder the same code or prompt was manipulated to achieve 
 the next script(3_1 to 3_2 etc). Often taking the output into account.
+
+Testing pt4 is where the first error was found so prompts were saved.
