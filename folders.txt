@@ -4,3 +4,9 @@ As in each folder the same code or prompt was manipulated to achieve
 the next script(3_1 to 3_2 etc). Often taking the output into account.
 
 Testing pt4 is where the first error was found so prompts were saved.
+Testing pt5 is where prompts were tested and reworked.
+
+Final testing includes ablation, Claude and Gpt code to be used in reports. 
+These files are prefixed with gpt, claude and abl to indicate it.
+All ablation tests are with gpt code.
+Differential testing is also included to help find more errors.

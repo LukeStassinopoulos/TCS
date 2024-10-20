@@ -1,0 +1,10 @@
+RuntimeError: "normal_kernel_cuda" not implemented for 'Int'
+
+AttributeError: 'Linear' object has no attribute 'device'
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+
+
+ModuleNotFoundError: No module named 'tensorboard' (I didn't have it installed)
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+ValueError: too many values to unpack (expected 2)
