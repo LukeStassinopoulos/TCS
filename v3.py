@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn
 import random
 
-def mutate_value(value, mutation_range=(1.1,2.2)):
+def mutate_value(value, mutation_range=(10,11)):
     """Mutates a given value by adding a small random number within the mutation range."""
     return max(1, value + random.randint(*mutation_range))  # Ensure value is at least 1 for dimensions
 

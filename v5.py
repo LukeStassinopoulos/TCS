@@ -4,7 +4,7 @@ import random
 import sys
 import traceback
 
-def mutate_value(value, mutation_range=(-1,100)):
+def mutate_value(value, mutation_range=(-3,6)):
     """Mutates a given value by adding a small random number within the mutation range."""
     return value + random.randint(*mutation_range)
 

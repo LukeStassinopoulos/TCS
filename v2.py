@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import random
 
-def mutate_value(value, mutation_range=(5,10)):
+def mutate_value(value, mutation_range=(100,10000000)):
     """Mutates a given value by adding a small random number within the mutation range."""
     return value + random.randint(*mutation_range)
 
